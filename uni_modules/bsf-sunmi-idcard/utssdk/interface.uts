@@ -1,0 +1,74 @@
+
+export type BindServiceOptions = {
+  onConnected : () => void
+  onDisConnected : () => void
+}
+
+
+export type GetSiCardBaseInfoOptions = {
+  success : (res : String) => void
+  fail : (res : any) => void
+}
+
+
+export type GetJRICCardInfoOptions = {
+  success : (cardno : String, name: String) => void
+  fail : (res : any) => void
+}
+
+export type CloseCardOptions = {
+  success : () => void
+  fail : (res : any) => void
+}
+
+
+export type OpenCpuCardOptions = {
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+
+export type GetEMIDOptions = {
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+
+export type SendCommandOptions = {
+  command :String,
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+export type OpenMemoryCardOptions = {
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+export type MemoryCardAuthEnticationOptions = {
+	mode: number,
+	addr: number,
+	key: String,
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+export type MemoryCardReadDataOptions = {
+	addr: number,
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+export type MemoryCardWriteDataOptions = {
+	addr: number,
+	data: String,
+  success : (res: any) => void
+  fail : (res : any) => void
+}
+
+export type MemoryCardWriteDataValOptions = {
+	addr: number,
+	data: Int,
+  success : (res: any) => void
+  fail : (res : any) => void
+}
